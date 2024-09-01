@@ -23,3 +23,14 @@ const deleteTask = (btn) => {
     
    
 }
+
+const deleteTaskCheck = () => {
+  const taskList = document.getElementById("taskList" );
+  const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+
+
+   checkboxes.forEach(checkbox => {
+          const li = checkbox.parentNode;
+          li.parentNode.removeChild(li);
+   });
+}
